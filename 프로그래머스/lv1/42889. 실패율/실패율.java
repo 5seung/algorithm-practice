@@ -18,10 +18,7 @@ class Solution {
             if(temp.containsKey(i)){
                 failureRate[i-1] = (double)temp.get(i)/(users-failUsers);
                 failUsers += temp.get(i);
-            }else{
-                failureRate[i-1] = 0;
             }
-                System.out.println(failureRate[i-1]);
         }
         
         int[] answer = new int[N];
