@@ -5,17 +5,12 @@ class Solution {
         int answer = 0;
         Arrays.sort(lost);
         Arrays.sort(reserve);
-        List<Integer> loster = new ArrayList<>();
-        List<Integer> reserver = new ArrayList<>();
-        for(int i :reserve){
-            reserver.add(i);
-        }
+        
         for(int i = 0; i<lost.length; i++){
             for(int j = 0; j<reserve.length; j++){
                 if(lost[i]==reserve[j]){
                     lost[i]=-1;
                     reserve[j]=-1;
-                    break;
                 }
             }
         }
@@ -27,6 +22,8 @@ class Solution {
                 }
             }
         }
+        
+        List<Integer> loster = new ArrayList<>();
         for(int i: lost){
             if(i != -1){
                 loster.add(i);
