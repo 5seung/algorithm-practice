@@ -35,8 +35,7 @@ class Solution {
         
         String[] keyArr = tempSet.toArray(new String[0]);
         
-        //교집합갯수 구하기
-        //합집합개수
+        //교집합 합집합 수 구하기
         int interNum = 0;
         int unionNum = 0;
         for(String key : keyArr){
