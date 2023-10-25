@@ -26,9 +26,9 @@ class Solution {
                     break;
             }
             if(startX == endX && startY == endY) continue;
+            
             visitSpot.add(startX+""+startY+""+endX+""+endY);
             visitSpot.add(endX+""+endY+""+startX+""+startY);
-            
         }
         answer = visitSpot.size()/2;
         return answer;
