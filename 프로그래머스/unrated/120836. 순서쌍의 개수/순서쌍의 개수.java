@@ -1,6 +1,7 @@
 class Solution {
+    //약수 갯수 구하기
     public int solution(int n) {
-
+        // 제곱근 구하기
         double sqrt = Math.sqrt(n);
         int answer = 0;
 
