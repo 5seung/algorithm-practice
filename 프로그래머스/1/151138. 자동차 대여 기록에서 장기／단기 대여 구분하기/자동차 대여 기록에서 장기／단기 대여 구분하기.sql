@@ -1,5 +1,7 @@
 -- 코드를 입력하세요
 -- 대여 시작일이 2022년 9월에 속하는 대여 기록에 대해서
+-- 날짜 차이 계산 :: DATEDIFF
+-- *대여 시작일부터 1일 >> 날짜 차이 계산 후 +1을 해줘야함
 SELECT HISTORY_ID, CAR_ID, DATE_FORMAT(START_DATE, '%Y-%m-%d') START_DATE,
     DATE_FORMAT(END_DATE, '%Y-%m-%d') END_DATE,
     IF(DATEDIFF(END_DATE, START_DATE)+1 >= 30, "장기 대여", "단기 대여") RENT_TYPE
