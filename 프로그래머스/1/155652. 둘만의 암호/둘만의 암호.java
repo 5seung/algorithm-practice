@@ -6,16 +6,11 @@ class Solution {
             int i = 0;
             // index만큼 뒤의 알파벳 중 skip 문자 포함여부 체크
             while(i < index){
-                if(c == 'z'){
-                    c = 'a';
-                }else{
-                    c++;
-                }
+                c = (c == 'z') ? 'a' : (char)(c + 1);
                 
-                if(skip.contains(c+"")){
-                    i--;
+                if(!skip.contains(c+"")){
+                    i++;
                 }
-                i++;
             }
             answer += c;
         }
