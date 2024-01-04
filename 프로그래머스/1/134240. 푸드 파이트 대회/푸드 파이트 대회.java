@@ -1,14 +1,12 @@
 class Solution {
     public String solution(int[] food) {
-        String answer = "";
-        for(int i = 1; i<food.length; i++){
-            answer += (i+"").repeat(food[i]/2);
+         String answer = "0";
+
+        for (int i = food.length - 1; i > 0; i--) {
+            for (int j = 0; j < food[i] / 2; j++) {
+                answer = i + answer + i; 
+            }
         }
-        
-        StringBuffer sb = new StringBuffer(answer);
-        String reverse = sb.reverse().toString();
-        
-        answer += "0" + reverse;
         
         return answer;
     }
