@@ -4,7 +4,7 @@ class Solution {
         for(char ch : s.toCharArray()){
             if(ch==' ') {
                 answer += ch;
-            } else if(ch>='a' && ch<='z') {
+            } else if(Character.isLowerCase(ch)) {
                 answer += (char)('a' + (ch+n-'a')%26);
             } else {
                 answer += (char)('A' + (ch+n-'A')%26);
