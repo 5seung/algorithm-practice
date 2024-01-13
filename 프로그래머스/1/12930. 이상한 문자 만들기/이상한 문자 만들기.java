@@ -11,8 +11,8 @@ class Solution {
             
             if(answer.length() != s.length()){
                 answer += " ";
+                idx = 0;
             }
-            idx = 0;
         }
         return answer;
     }
