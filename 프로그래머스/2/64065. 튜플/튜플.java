@@ -11,9 +11,9 @@ class Solution {
         for(String temp : str){
             for(String i : temp.split(",")){
                 int x = Integer.parseInt(i);
-                if(!set.contains(x)){
+                // set.add() > set에 중복값이 없으면 true를 반환, 값 추가된다.
+                if(set.add(x)){
                     answer[idx++] = x;
-                    set.add(x);
                 }
             }
         }
