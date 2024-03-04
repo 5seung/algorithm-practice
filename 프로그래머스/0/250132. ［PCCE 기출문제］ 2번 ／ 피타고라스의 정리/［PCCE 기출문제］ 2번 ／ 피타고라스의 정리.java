@@ -6,7 +6,7 @@ public class Solution {
         int a = sc.nextInt();
         int c = sc.nextInt();
 
-        int b_square = (c*c) - (a*a);
+        int b_square = (c - a) * (c + a);
 
         System.out.println(b_square);
     }
